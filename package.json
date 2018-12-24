@@ -1,0 +1,32 @@
+{
+  "name": "simred-deku",
+  "version": "1.0.0",
+  "description": "Deku bindings for Simred",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir ./lib --no-comments",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "simred",
+    "deku",
+    "state",
+    "manager",
+    "management"
+  ],
+  "author": "Gaël PHILIPPE",
+  "license": "MIT",
+  "homepage": "https://github.com/gaelph/simred-deku",
+  "repository": "https://github.com/gaelph/simred-deku.git",
+  "dependencies": {
+    "deku": "^2.0.0-rc16",
+    "simred": "^1.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1"
+  }
+}
