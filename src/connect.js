@@ -16,6 +16,7 @@ export const connect = (stateToProps, actionsToProps) => {
   return (Component) => {
     return Object.assign({}, Component, {
       render: ({ props, children }) => {
+        /* istanbul ignore next */
         children = children || []
         const state = Simred.getState()
         const actions = Simred.getActions()

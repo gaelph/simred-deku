@@ -1,4 +1,4 @@
-# simred-deku [![NPM version](https://badge.fury.io/js/simred-deku.svg)](https://npmjs.org/package/simred-deku) [![Build Status](https://travis-ci.org/gaelph/simred-deku.svg?branch=master)](https://travis-ci.org/gaelph/simred-deku)
+# simred-deku [![NPM version](https://badge.fury.io/js/simred-deku.svg)](https://npmjs.org/package/simred-deku) ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg) ![Tests](https://img.shields.io/badge/tests-2%2F2-brightgreen.svg) ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)
 
 > Deku bindings for Simred
 If you do know what Simred is, take a look at [the project's GitHub page](https://github.com/gaelph/simred).

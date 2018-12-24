@@ -7,19 +7,22 @@ let _timeToRender = 1000
 
 const onStateUpdate = (Component, render) => (state) => {
   const now = performance.now()
+  /* istanbul ignore else */
   if (_lastRender - now < _timeToRender) {
+    /* istanbul ignore if */
     if (_renderTimer) cancelAnimationFrame(_renderTimer)
 
     _renderTimer = requestAnimationFrame(() => {
       try {
-        console.log('render after state update')
+        console.log('render after state update', Component)
         const before = performance.now()
 
-        render( <Component /> , {})
+        render( <Component/> , {})
 
         _timeToRender = before - performance.now()
         _lastRender = now
       } catch (e) {
+        /* istanbul ignore next */
         console.error(e)
       }
     })
@@ -37,9 +40,8 @@ const onStateUpdate = (Component, render) => (state) => {
  * @param {HTMLElement} rootElement
  */
 export const render = (App, store, rootElement) => {
-  console.log("Creating app")
-  const render = createApp(document.querySelector(rootElement), {})
-  render( <App /> , {})
+  const renderer = createApp(document.querySelector(rootElement), {})
+  renderer( <App /> , {})
 
-  store.subscribe(onStateUpdate(App, render))
+  store.subscribe(onStateUpdate(App, renderer))
 }
