@@ -8,6 +8,10 @@ It works more like `react-redux` rather than using the context/dispatch paramete
 However, I thought it would be better to only give access to the store to components that
 actually require it, i.e. Container Components.
 
+> **Note to React users**
+> Deku doesn't require the use of a `<Provider/>` Component.
+> The simple use of the `connect()` and the custom `render()` functions will suffice. 
+
 ## Installation
 
 ```sh
@@ -16,6 +20,7 @@ $ npm install --save simred-deku
 
 ## Usage
 
+### Implementing a Container Component
 ```js
 import { connect } from 'simred-deku'
 import { Component } from './component'
@@ -36,6 +41,20 @@ export const Container = connect(
   mapSateToProps,
   mapActionsToProps,
 )(Component)
+```
+
+### Passing the Store to the app
+```js
+import Simred from 'simred'
+import { rootReducer } from './reducers'
+
+import { element } from 'deku'
+import { render } from 'simred-deku'
+import { App } from './components'
+
+const store = Simred.createStore(rootReducer)
+
+render( <App />, store, document.getElementById('root'))
 ```
 
 ## License
