@@ -1,10 +1,11 @@
 # simred-deku [![NPM version](https://badge.fury.io/js/simred-deku.svg)](https://npmjs.org/package/simred-deku) ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg) ![Tests](https://img.shields.io/badge/tests-2%2F2-brightgreen.svg) ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)
 
 > Deku bindings for Simred
-If you do know what Simred is, take a look at [the project's GitHub page](https://github.com/gaelph/simred).
+
+If you do know what Simred is, take a look at [the project's GitHub page](https://github.com/gaelph/simred).  
 If Deku is unknown to you, pay a visit to [its GitHub repo](https://github.com/anthonyshort/deku).
 
-It works more like `react-redux` rather than using the context/dispatch parameters in deku.
+It works more like `react-redux` rather than using the context/dispatch parameters in deku.  
 However, I thought it would be better to only give access to the store to components that
 actually require it, i.e. Container Components.
 
