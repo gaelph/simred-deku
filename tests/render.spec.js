@@ -33,7 +33,7 @@ describe('Render', function () {
         // }, 1)
       }
 
-      render(Container, { subscribe: subscribeFunction }, 'body')
+      render(<Container />, { subscribe: subscribeFunction }, document.getElementById('body'))
     }
 
     expect(testFunc).not.toThrow()

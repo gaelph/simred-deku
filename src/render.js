@@ -17,7 +17,7 @@ const onStateUpdate = (Component, render) => (state) => {
         console.log('render after state update', Component)
         const before = performance.now()
 
-        render( <Component/> , {})
+        render( Component , {})
 
         _timeToRender = before - performance.now()
         _lastRender = now
@@ -40,8 +40,8 @@ const onStateUpdate = (Component, render) => (state) => {
  * @param {HTMLElement} rootElement
  */
 export const render = (App, store, rootElement) => {
-  const renderer = createApp(document.querySelector(rootElement), {})
-  renderer( <App /> , {})
+  const renderer = createApp(rootElement, {})
+  renderer( App, {})
 
   store.subscribe(onStateUpdate(App, renderer))
 }

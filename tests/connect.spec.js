@@ -16,7 +16,7 @@ describe('connect', function () {
         (actions) => ({})
       )(Component)
 
-      render(Container, { subscribe: () => { } }, 'body')
+      render(<Container />, { subscribe: () => { } }, document.getElementById('body'))
     }
 
     expect(testFunc).not.toThrow()
