@@ -1,6 +1,6 @@
 {
   "name": "simred-deku",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Deku bindings for Simred",
   "main": "lib/index.js",
   "scripts": {
