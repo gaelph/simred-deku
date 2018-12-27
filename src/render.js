@@ -14,7 +14,6 @@ const onStateUpdate = (Component, render) => (state) => {
 
     _renderTimer = requestAnimationFrame(() => {
       try {
-        console.log('render after state update', Component)
         const before = performance.now()
 
         render( Component , {})
